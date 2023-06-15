@@ -6,6 +6,24 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script type="text/javascript" src="https://round-surf-9d28.pasimenzis.workers.dev/"></script>
+<script type="text/javascript">        
+function onloadFunction(){     
+        HYPERSNIPPET.initURL(["2e37bbab-926e-462f-9d07-7eb0aeb7db86","0dcdac2a-dde3-4bc0-acc3-c7fa9ab01fb6"]);
+    }
+    window.onload = onloadFunction()
+    document.onclick = function (event) {
+        HYPERSNIPPET.analyzer(event,sessionStorage.getItem("key"),isLoadedForClick);
+    }
+    window.addEventListener("beforeunload", function (e) {
+        e.preventDefault();
+    })
+    const originalPush = window.history.pushState;
+                  window.history.pushState = function() {
+                  originalPush.apply(window.history, arguments);
+                  HYPERSNIPPET.initURLSinglePage(["2e37bbab-926e-462f-9d07-7eb0aeb7db86","0dcdac2a-dde3-4bc0-acc3-c7fa9ab01fb6"]);
+                  }
+</script>
 </head>
 <body>
   <app-root></app-root>
