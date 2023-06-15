@@ -17,6 +17,9 @@ export class MyPage2Component {
   }
 
     async handleClickPage1() {
+      await setTimeout(() => {
         this.router.navigate(['/page1']);
+      }, 1500);
+    
   }
 }

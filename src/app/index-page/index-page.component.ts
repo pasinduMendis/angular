@@ -10,11 +10,15 @@ export class IndexPageComponent {
   constructor(private router: Router) { }
 
   async handleClickPage1() {
+    await setTimeout(() => {
       this.router.navigate(['/page1']);
-    
+    }, 1500);
   }
 
     async handleClickPage2() {
+      await setTimeout(() => {
         this.router.navigate(['/page2']);
+      }, 1500);
+    
   }
 }
