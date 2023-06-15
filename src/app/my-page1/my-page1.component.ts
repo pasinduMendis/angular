@@ -10,15 +10,11 @@ export class MyPage1Component {
   constructor(private router: Router) { }
 
   async handleClickIndex() {
-    await setTimeout(() => {
       this.router.navigate(['/']);
-    }, 1500);
   }
 
     async handleClickPage2() {
-      await setTimeout(() => {
         this.router.navigate(['/page2']);
-      }, 1500);
     
   }
 }
